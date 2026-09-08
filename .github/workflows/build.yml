@@ -7,6 +7,8 @@ permissions:
 
 jobs:
   macos_build:
+    # Disabled by estate policy; use owned/local production tooling.
+    if: ${{ false }}
     runs-on: ${{ matrix.runner }}
     name: "Build for Mac OS"
     env:
@@ -54,6 +56,8 @@ jobs:
           path: "VSCode-darwin-${{ matrix.arch }}/macos-${{ matrix.arch }}-app.zip"
 
   linux_build:
+    # Disabled by estate policy; use owned/local production tooling.
+    if: ${{ false }}
     runs-on: ${{ matrix.runner }}
     name: "Build for Linux"
     env:
@@ -132,6 +136,8 @@ jobs:
           path: ${{ github.workspace }}/repository/.build/linux/rpm/${{ matrix.arch == 'x64' && 'x86_64' || 'aarch64' }}/linux-${{ matrix.arch }}.rpm
 
   windows-build:
+    # Disabled by estate policy; use owned/local production tooling.
+    if: ${{ false }}
     runs-on: 'windows-latest'
     name: "Build for Windows"
     strategy:

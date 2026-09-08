@@ -9,6 +9,8 @@ permissions:
 
 jobs:
   macos_build:
+    # Disabled by estate policy; use owned/local production tooling.
+    if: ${{ false }}
     runs-on: ${{ matrix.runner }}
     environment: production
     name: "Release for Mac OS"
@@ -104,6 +106,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   linux_build:
+    # Disabled by estate policy; use owned/local production tooling.
+    if: ${{ false }}
     runs-on: ${{ matrix.runner }}
     environment: production
     name: "Release for Linux"
@@ -192,6 +196,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   windows-build:
+    # Disabled by estate policy; use owned/local production tooling.
+    if: ${{ false }}
     runs-on: 'windows-latest'
     environment: production
     name: "Release for Windows"
